@@ -171,7 +171,7 @@
 									></a>
 								</div>
 								<div class="row text-center">
-									<div class="card bg-transparent border-0 col-lg-4">
+									<div class="card bg-transparent border-0 col-lg-4 slideanim">
 										<div class="card-body">
 											<p class="card-title h1">
 												<i class="fas fa-suitcase-rolling fa-lg"></i>
@@ -179,13 +179,13 @@
 											<p class="card-subtitle mb-2 h2">
 												Equipos
 											</p>
-											<p class="card-text lead">
+											<p class="card-text lead slideanim">
 												Tenemos una gran variedad de equipos, encuentra el que
 												mejor se ajuste a tus necesidades.
 											</p>
 										</div>
 									</div>
-									<div class="card bg-transparent border-0 col-lg-4">
+									<div class="card bg-transparent border-0 col-lg-4 slideanim">
 										<div class="card-body">
 											<p class="card-title h1">
 												<i class="fas fa-tint fa-lg"></i>
@@ -193,13 +193,13 @@
 											<p class="card-subtitle mb-2 h2">
 												Líquidos
 											</p>
-											<p class="card-text lead">
+											<p class="card-text lead slideanim">
 												Los sabores más extravagantes y exquisitos del mercado,
 												atrévete a probar nuestras especialidades.
 											</p>
 										</div>
 									</div>
-									<div class="card bg-transparent border-0 col-lg-4">
+									<div class="card bg-transparent border-0 col-lg-4 slideanim">
 										<div class="card-body">
 											<p class="card-title h1">
 												<i class="fas fa-plus fa-lg"></i>
@@ -207,13 +207,14 @@
 											<p class="card-subtitle mb-2 h2">
 												Accesorios
 											</p>
-											<p class="card-text lead">
+											<p class="card-text lead slideanim">
 												Contamos con todo tipo de accesorios y refacciones para
 												todas las marcas que vendemos.
 											</p>
 										</div>
 									</div>
 								</div>
+								<div class="row">jajajaja</div>
 							</div>
 						</div>
 						<div id="blk">
@@ -460,6 +461,28 @@
 					createCookie('Mayor_Edad', 'no', 0);
 				});
 			}
+
+			$(window).ready(function() {
+				$('.slideanim').each(function() {
+					var pos = $(this).offset().top;
+
+					var winTop = $(window).scrollTop();
+					if (pos < winTop + 1000) {
+						$(this).addClass('slide');
+					}
+				});
+			});
+
+			$(window).scroll(function() {
+				$('.slideanim').each(function() {
+					var pos = $(this).offset().top;
+
+					var winTop = $(window).scrollTop();
+					if (pos < winTop + 950) {
+						$(this).addClass('slide');
+					}
+				});
+			});
 		</script>
 	</body>
 </html>
