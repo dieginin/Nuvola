@@ -59,25 +59,50 @@
 					>
 						<li class="nav-item pill-1">
 							<a
+								id="pills-inicio-tab"
 								class="nav-link btn-sm active"
 								data-toggle="pill"
 								href="#inicio"
+								role="tab"
+								aria-controls="pills-inicio"
+								aria-selected="true"
 								><i class="fas fa-fw fa-home"></i> Inicio
 								<span class="sr-only">(actual)</span></a
 							>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" data-toggle="pill" href="#equipos"
+							<a
+								id="pills-equipos-tab"
+								class="nav-link btn-sm"
+								data-toggle="pill"
+								href="#equipos"
+								role="tab"
+								aria-controls="pills-equipos"
+								aria-selected="false"
 								><i class="fas fa-fw fa-suitcase-rolling"></i> Equipos</a
 							>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" data-toggle="pill" href="#liquido"
+							<a
+								id="pills-liquido-tab"
+								class="nav-link btn-sm"
+								data-toggle="pill"
+								href="#liquido"
+								role="tab"
+								aria-controls="pills-liquido"
+								aria-selected="false"
 								><i class="fas fa-fw fa-tint"></i> Líquidos</a
 							>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" data-toggle="pill" href="#extras"
+							<a
+								id="pills-extras-tab"
+								class="nav-link btn-sm"
+								data-toggle="pill"
+								href="#extras"
+								role="tab"
+								aria-controls="pills-extras"
+								aria-selected="false"
 								><i class="fas fa-fw fa-plus"></i> Extras</a
 							>
 						</li>
@@ -99,8 +124,13 @@
 
 		<!-- Contenido -->
 		<main>
-			<div class="tab-content">
-				<div id="inicio" class="tab-pane fade show active">
+			<div class="tab-content" id="pills-tabContent">
+				<div
+					id="inicio"
+					class="tab-pane fade show active"
+					role="tabpanel"
+					aria-labelledby="pills-inicio-tab"
+				>
 					<div id="plx">
 						<div class="container text-center">
 							<div class="main pt-2">
@@ -140,6 +170,50 @@
 										>Saber <i class="fas fa-plus fa-fw"></i
 									></a>
 								</div>
+								<div class="card-deck text-center">
+									<div class="card bg-transparent border-0">
+										<div class="card-body">
+											<p class="card-title h1">
+												<i class="fas fa-suitcase-rolling fa-lg"></i>
+											</p>
+											<p class="card-subtitle mb-2 h2">
+												Equipos
+											</p>
+											<p class="card-text lead">
+												Tenemos una gran variedad de equipos, encuentra el que
+												mejor se acople a tus necesidades.
+											</p>
+										</div>
+									</div>
+									<div class="card bg-transparent border-0">
+										<div class="card-body">
+											<p class="card-title h1">
+												<i class="fas fa-tint fa-lg"></i>
+											</p>
+											<p class="card-subtitle mb-2 h2">
+												Líquidos
+											</p>
+											<p class="card-text lead">
+												Los sabores mas extravagantes y exquisitos del mercado,
+												atrevete a probar nuestras especialidades.
+											</p>
+										</div>
+									</div>
+									<div class="card bg-transparent border-0">
+										<div class="card-body">
+											<p class="card-title h1">
+												<i class="fas fa-plus fa-lg"></i>
+											</p>
+											<p class="card-subtitle mb-2 h2">
+												Accesorios
+											</p>
+											<p class="card-text lead">
+												Contamos con todo tipo de accesorios y refacciones para
+												todas las marcas que vendemos.
+											</p>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 						<div id="blk">
@@ -150,21 +224,36 @@
 					</div>
 				</div>
 
-				<div id="equipos" class="tab-pane fade">
+				<div
+					id="equipos"
+					class="tab-pane fade"
+					role="tabpanel"
+					aria-labelledby="pills-equipos-tab"
+				>
 					<h3>Equipos</h3>
 					<p>
 						Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
 						nisi ut aliquip ex ea commodo consequat.
 					</p>
 				</div>
-				<div id="liquido" class="tab-pane fade">
+				<div
+					id="liquido"
+					class="tab-pane fade"
+					role="tabpanel"
+					aria-labelledby="pills-liquido-tab"
+				>
 					<h3>Líquidos</h3>
 					<p>
 						Sed ut perspiciatis unde omnis iste natus error sit voluptatem
 						accusantium doloremque laudantium, totam rem aperiam.
 					</p>
 				</div>
-				<div id="extras" class="tab-pane fade">
+				<div
+					id="extras"
+					class="tab-pane fade"
+					role="tabpanel"
+					aria-labelledby="pills-extras-tab"
+				>
 					<h3>Extras</h3>
 					<p>
 						Eaque ipsa quae ab illo inventore veritatis et quasi architecto
@@ -328,7 +417,7 @@
 					<div class="col alert">
 						<strong>¡Advertencia!</strong> Ingerir
 						<abbr title="Electronic Liquids" class="">eLiquids</abbr> con
-						nicotina, puede causar defectos de nacimiento u otros daños
+						nicotina puede causar defectos de nacimiento u otros daños
 						reproductivos.
 					</div>
 				</div>
