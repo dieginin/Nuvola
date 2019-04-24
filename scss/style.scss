@@ -1,5 +1,3 @@
-// Color system
-
 $white: #fff !default;
 $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
@@ -12,24 +10,6 @@ $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
 $black: #000 !default;
-
-$grays: () !default;
-// stylelint-disable-next-line scss/dollar-variable-default
-$grays: map-merge(
-	(
-		'100': $gray-100,
-		'200': $gray-200,
-		'300': $gray-300,
-		'400': $gray-400,
-		'500': $gray-500,
-		'600': $gray-600,
-		'700': $gray-700,
-		'800': $gray-800,
-		'900': $gray-900
-	),
-	$grays
-);
-
 $blue: #007bff !default;
 $indigo: #6610f2 !default;
 $purple: #6f42c1 !default;
@@ -37,74 +17,19 @@ $pink: #e83e8c !default;
 $red: #dc3545 !default;
 $orange: #fd7e14 !default;
 $yellow: #ffc107 !default;
-$green: #28a745 !default;
+$green: #45fba4 !default;
 $teal: #20c997 !default;
 $cyan: #17a2b8 !default;
-
-$colors: () !default;
-// stylelint-disable-next-line scss/dollar-variable-default
-$colors: map-merge(
-	(
-		'blue': $blue,
-		'indigo': $indigo,
-		'purple': $purple,
-		'pink': $pink,
-		'red': $red,
-		'orange': $orange,
-		'yellow': $yellow,
-		'green': $green,
-		'teal': $teal,
-		'cyan': $cyan,
-		'white': $white,
-		'gray': $gray-600,
-		'gray-dark': $gray-800
-	),
-	$colors
-);
-
-$primary: $blue !default;
-$secondary: $pink !default;
-$success: $green !default;
-$info: $cyan !default;
-$warning: $yellow !default;
-$danger: $red !default;
-$light: $gray-100 !default;
-$dark: $gray-900 !default;
-
-$theme-colors: () !default;
-// stylelint-disable-next-line scss/dollar-variable-default
-$theme-colors: map-merge(
-	(
-		'primary': $primary,
-		'secondary': $secondary,
-		'success': $success,
-		'info': $info,
-		'warning': $warning,
-		'danger': $danger,
-		'light': $light,
-		'dark': $dark,
-		'blue': $blue,
-		'indigo': $indigo,
-		'purple': $purple,
-		'pink': $pink,
-		'red': $red,
-		'orange': $orange,
-		'yellow': $yellow,
-		'green': $green,
-		'teal': $teal,
-		'cyan': $cyan,
-		'white': $white,
-		'gray': $gray-600,
-		'graydark': $gray-800,
-		'black': $black
-	),
-	$theme-colors
-);
 
 @font-face {
 	font-family: 'Algerian Basic';
 	src: url('/../resources/fonts/AlgerianBasic/AlgerianBasic.ttf');
 	// src: url('/../NuvolaAlpha/resources/fonts/AlgerianBasic/AlgerianBasic.ttf');
+}
+
+@font-face {
+	font-family: 'Knewave';
+	src: url('/../resources/fonts/Knewave/knewave.ttf');
 }
 
 $colorCream: #f2f2f2;
@@ -132,11 +57,15 @@ body {
 	background-size: cover;
 }
 
-.cusFont {
+.FontNuv {
 	font-family: 'Algerian Basic';
 }
 
-.main > .cusFont {
+.FontWav {
+	font-family: 'Knewave';
+}
+
+.main > .FontNuv {
 	letter-spacing: 1.2rem;
 }
 
@@ -184,4 +113,50 @@ body {
 	color: #4e4e4e;
 	background-image: url('/../assets/img/Banner1.png');
 	background-size: contain;
+}
+
+.pequeño {
+	color: $white;
+	font-size: 1rem;
+	font-weight: 300;
+}
+
+.text-amber {
+	color: #45fba4 !important;
+}
+
+a.text-amber:hover,
+a.text-amber:focus {
+	color: #3ace86 !important;
+}
+
+.btn-outline-amber {
+	color: #45fba4;
+	border-color: #45fba4;
+}
+.btn-outline-amber:hover {
+	color: #202637;
+	background-color: #45fba4;
+	border-color: #45fba4;
+}
+.btn-outline-amber:focus,
+.btn-outline-amber.focus {
+	box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+}
+.btn-outline-amber.disabled,
+.btn-outline-amber:disabled {
+	color: #45fba4;
+	background-color: transparent;
+}
+.btn-outline-amber:not(:disabled):not(.disabled):active,
+.btn-outline-amber:not(:disabled):not(.disabled).active,
+.show > .btn-outline-amber.dropdown-toggle {
+	color: #fff;
+	background-color: #45fba4;
+	border-color: #45fba4;
+}
+.btn-outline-amber:not(:disabled):not(.disabled):active:focus,
+.btn-outline-amber:not(:disabled):not(.disabled).active:focus,
+.show > .btn-outline-amber.dropdown-toggle:focus {
+	box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
 }
