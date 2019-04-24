@@ -103,8 +103,8 @@ $theme-colors: map-merge(
 
 @font-face {
 	font-family: 'Algerian Basic';
-	// src: url('/../resources/fonts/AlgerianBasic/AlgerianBasic.ttf');
-	src: url('/../NuvolaAlpha/resources/fonts/AlgerianBasic/AlgerianBasic.ttf');
+	src: url('/../resources/fonts/AlgerianBasic/AlgerianBasic.ttf');
+	// src: url('/../NuvolaAlpha/resources/fonts/AlgerianBasic/AlgerianBasic.ttf');
 }
 
 $colorCream: #f2f2f2;
@@ -124,8 +124,8 @@ body {
 	color: $colorCream;
 	height: 385px;
 	background-color: $colorDark;
-	// background-image: url('/../assets/img/humo.jpg');
-	background-image: url('/../NuvolaAlpha/assets/img/humo.jpg');
+	background-image: url('/../assets/img/humo.jpg');
+	// background-image: url('/../NuvolaAlpha/assets/img/humo.jpg');
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -141,7 +141,7 @@ body {
 }
 
 #resto {
-	height: 70vh;
+	min-height: 70vh;
 	background-color: $colorCream;
 }
 
@@ -174,27 +174,6 @@ body {
 	border-top: $black 3pt solid;
 	border-bottom: $black 3pt solid;
 	border-radius: 13px 40px;
-}
-
-.banner {
-	position: relative;
-	text-align: center;
-}
-
-.banner-contenido {
-	position: absolute;
-	left: 50%;
-	top: 45%;
-	transform: translate(-50%, -50%);
-	z-index: 10;
-	color: #fff;
-	text-align: center;
-}
-
-.texto-banner {
-	color: $colorCream;
-	font-family: 'Algerian Basic';
-	font-size: 5vw;
 }
 
 .btn-banner {
