@@ -1,0 +1,202 @@
+// Color system
+
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-450: #b9bec4 !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+
+$grays: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$grays: map-merge(
+	(
+		'100': $gray-100,
+		'200': $gray-200,
+		'300': $gray-300,
+		'400': $gray-400,
+		'500': $gray-500,
+		'600': $gray-600,
+		'700': $gray-700,
+		'800': $gray-800,
+		'900': $gray-900
+	),
+	$grays
+);
+
+$blue: #007bff !default;
+$indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+$pink: #e83e8c !default;
+$red: #dc3545 !default;
+$orange: #fd7e14 !default;
+$yellow: #ffc107 !default;
+$green: #28a745 !default;
+$teal: #20c997 !default;
+$cyan: #17a2b8 !default;
+
+$colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$colors: map-merge(
+	(
+		'blue': $blue,
+		'indigo': $indigo,
+		'purple': $purple,
+		'pink': $pink,
+		'red': $red,
+		'orange': $orange,
+		'yellow': $yellow,
+		'green': $green,
+		'teal': $teal,
+		'cyan': $cyan,
+		'white': $white,
+		'gray': $gray-600,
+		'gray-dark': $gray-800
+	),
+	$colors
+);
+
+$primary: $blue !default;
+$secondary: $pink !default;
+$success: $green !default;
+$info: $cyan !default;
+$warning: $yellow !default;
+$danger: $red !default;
+$light: $gray-100 !default;
+$dark: $gray-900 !default;
+
+$theme-colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge(
+	(
+		'primary': $primary,
+		'secondary': $secondary,
+		'success': $success,
+		'info': $info,
+		'warning': $warning,
+		'danger': $danger,
+		'light': $light,
+		'dark': $dark,
+		'blue': $blue,
+		'indigo': $indigo,
+		'purple': $purple,
+		'pink': $pink,
+		'red': $red,
+		'orange': $orange,
+		'yellow': $yellow,
+		'green': $green,
+		'teal': $teal,
+		'cyan': $cyan,
+		'white': $white,
+		'gray': $gray-600,
+		'graydark': $gray-800,
+		'black': $black
+	),
+	$theme-colors
+);
+
+@font-face {
+	font-family: 'Algerian Basic';
+	// src: url('/../resources/fonts/AlgerianBasic/AlgerianBasic.ttf');
+	src: url('/../NuvolaAlpha/resources/fonts/AlgerianBasic/AlgerianBasic.ttf');
+}
+
+$colorCream: #f2f2f2;
+$colorDark: #35353580;
+$colorCreamMTrans: #f2f2f280;
+$colorCreamTrans: #f2f2f233;
+$colorPrimario: #57a3d6;
+$colorSecundario: #57a3d6;
+$colorTerciario: #8be6de;
+
+body {
+	background-color: $colorCream;
+	user-select: none;
+}
+
+#plx {
+	color: $colorCream;
+	height: 385px;
+	background-color: $colorDark;
+	// background-image: url('/../assets/img/humo.jpg');
+	background-image: url('/../NuvolaAlpha/assets/img/humo.jpg');
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.cusFont {
+	font-family: 'Algerian Basic';
+}
+
+.main > .cusFont {
+	letter-spacing: 1.2rem;
+}
+
+#resto {
+	height: 70vh;
+	background-color: $colorCream;
+}
+
+#blk {
+	color: $colorCream;
+	background-color: $gray-800;
+	background-attachment: fixed;
+}
+
+.page-footer {
+	background-color: $gray-300;
+	overflow: hidden;
+}
+
+.footer-copyright {
+	background-color: $gray-400;
+	border-top: $gray-500 1pt solid;
+}
+
+.text-copyright:first-child {
+	border-right: $gray-600 1pt dotted;
+}
+
+.text-copyright:last-child {
+	border-left: $gray-600 1pt dotted;
+}
+
+.alert-peligro {
+	padding-top: 10pt;
+	border-top: $black 3pt solid;
+	border-bottom: $black 3pt solid;
+	border-radius: 13px 40px;
+}
+
+.banner {
+	position: relative;
+	text-align: center;
+}
+
+.banner-contenido {
+	position: absolute;
+	left: 50%;
+	top: 45%;
+	transform: translate(-50%, -50%);
+	z-index: 10;
+	color: #fff;
+	text-align: center;
+}
+
+.texto-banner {
+	color: $colorCream;
+	font-family: 'Algerian Basic';
+	font-size: 5vw;
+}
+
+.btn-banner {
+	font-size: 2vw;
+}
