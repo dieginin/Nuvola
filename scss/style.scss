@@ -113,11 +113,18 @@ body {
 	color: #4e4e4e;
 	background-image: url('/../assets/img/Banner1.png');
 	background-size: contain;
+	background-position: center;
 }
 
-.pequeño {
+.banner-titulo {
+	font-size: 4rem;
+	font-weight: 300;
+	line-height: 1.2;
+}
+
+.banner-leyenda {
 	color: $white;
-	font-size: 1rem;
+	font-size: 0.75rem;
 	font-weight: 300;
 }
 
@@ -151,7 +158,7 @@ a.text-amber:focus {
 .btn-outline-amber:not(:disabled):not(.disabled):active,
 .btn-outline-amber:not(:disabled):not(.disabled).active,
 .show > .btn-outline-amber.dropdown-toggle {
-	color: #fff;
+	color: #202637;
 	background-color: #45fba4;
 	border-color: #45fba4;
 }
